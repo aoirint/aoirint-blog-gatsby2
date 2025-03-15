@@ -12,6 +12,7 @@ on:
 env:
   IMAGE_NAME: ghcr.io/aoirint/aoirint-blog-gatsby2
   IMAGE_TAG: ${{ github.event.release.tag_name != '' && github.event.release.tag_name || 'latest' }}
+  APP_ID: ${{ secrets.APP_ID }}
 
 jobs:
   docker-build-and-push:
@@ -52,13 +53,13 @@ jobs:
     needs: [docker-build-and-push]
 
     runs-on: ubuntu-latest
-    if: ${{ secrets.APP_ID != ''}}
+    if: ${{ env.APP_ID != ''}}
 
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
         with:
-          app-id: ${{ secrets.APP_ID }}
+          app-id: ${{ env.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           repositories: aoirint/aoirint-blog-deploy
 
