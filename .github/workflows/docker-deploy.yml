@@ -12,10 +12,20 @@ on:
 env:
   IMAGE_NAME: ghcr.io/aoirint/aoirint-blog-gatsby2
   IMAGE_TAG: ${{ github.event.release.tag_name != '' && github.event.release.tag_name || 'latest' }}
-  APP_ID: ${{ secrets.APP_ID }}
 
 jobs:
+  config:
+    runs-on: ubuntu-latest
+    outputs:
+      app_id: ${{ steps.get-app-id.outputs.app_id }}
+
+    steps:
+      - name: Get App ID
+        id: get-app-id
+        run: echo "app_id=${{ secrets.APP_ID }}" >> "${GITHUB_OUTPUT}"
+
   docker-build-and-push:
+    needs: [config]
     runs-on: ubuntu-latest
 
     permissions:
@@ -24,7 +34,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v3
@@ -50,16 +60,16 @@ jobs:
           cache-to: type=registry,ref=${{ env.IMAGE_NAME_AND_TAG }}-buildcache,mode=max
 
   dispatch-deploy:
-    needs: [docker-build-and-push]
+    needs: [config,docker-build-and-push]
 
     runs-on: ubuntu-latest
-    if: ${{ env.APP_ID != ''}}
+    if: ${{ needs.config.outputs.app_id != ''}}
 
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
         with:
-          app-id: ${{ env.APP_ID }}
+          app-id: ${{ needs.config.outputs.app_id }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           repositories: aoirint/aoirint-blog-deploy
 
