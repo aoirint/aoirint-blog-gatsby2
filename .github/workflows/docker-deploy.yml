@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Get App ID
         id: get-app-id
-        run: echo "app_id=${{ secrets.APP_ID }}" >> "${GITHUB_OUTPUT}"
+        run: echo "app_id=${{ vars.APP_ID }}" >> "${GITHUB_OUTPUT}"
 
   docker-build-and-push:
     needs: [config]
