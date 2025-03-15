@@ -27,7 +27,7 @@
     "bulma": "^0.9.4",
     "dayjs": "^1.11.10",
     "eslint-config-prettier": "^9.1.0",
-    "gatsby": "^5.12.8",
+    "gatsby": "^5.14.1",
     "gatsby-plugin-draft": "github:aoirint/gatsby-plugin-draft#0.2.0+aoirint.2",
     "gatsby-plugin-feed": "^5.12.2",
     "gatsby-plugin-google-gtag": "^5.12.2",
