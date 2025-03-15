@@ -71,7 +71,7 @@ jobs:
         with:
           app-id: ${{ needs.config.outputs.app_id }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
-          repositories: aoirint/aoirint-blog-deploy
+          repositories: aoirint-blog-deploy
 
       - name: Dispatch deploy workflow
         uses: actions/github-script@v7
