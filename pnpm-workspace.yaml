@@ -1,0 +1,17 @@
+# Enable save-exact
+savePrefix: ''
+
+# Delay the installation of newly published versions (minutes)
+minimumReleaseAge: 1440
+
+# Dependencies allowed to run install scripts
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - core-js
+  - core-js-pure
+  - es5-ext
+  - gatsby
+  - gatsby-cli
+  - lmdb
+  - msgpackr-extract
+  - sharp
