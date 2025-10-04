@@ -2,10 +2,6 @@
   "name": "aoirint-blog-gatsby2",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "22.x",
-    "npm": "10.x"
-  },
   "description": "Eyamigusa",
   "keywords": [
     "gatsby"
@@ -20,6 +16,10 @@
     "lint": "eslint .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,json}' && eslint --fix ."
   },
+  "engines": {
+    "node": "22.x"
+  },
+  "packageManager": "pnpm@10.18.0",
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
