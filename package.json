@@ -25,7 +25,7 @@
     "@mdx-js/react": "2.3.0",
     "bulma": "0.9.4",
     "dayjs": "1.11.18",
-    "eslint-config-prettier": "9.1.2",
+    "eslint-config-prettier": "10.1.8",
     "gatsby": "5.14.6",
     "gatsby-plugin-draft": "github:aoirint/gatsby-plugin-draft#0.2.0+aoirint.2",
     "gatsby-plugin-feed": "5.14.0",
