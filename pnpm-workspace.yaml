@@ -1,7 +1,7 @@
 # Enable save-exact
 savePrefix: ''
 
-# Dependencies that are allowed to run install scripts
+# Dependencies allowed to run install scripts
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - core-js
