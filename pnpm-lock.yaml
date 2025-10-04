@@ -73,7 +73,7 @@ importers:
         version: 7.15.0(gatsby-plugin-sharp@5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))(graphql@16.11.0))(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))
       gatsby-remark-katex:
         specifier: 7.15.0
-        version: 7.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))(katex@0.16.23)
+        version: 7.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))(katex@0.16.22)
       gatsby-source-filesystem:
         specifier: 5.15.0
         version: 5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))
@@ -84,8 +84,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       katex:
-        specifier: 0.16.23
-        version: 0.16.23
+        specifier: 0.16.22
+        version: 0.16.22
       prettier:
         specifier: 3.6.2
         version: 3.6.2
@@ -4239,8 +4239,8 @@ packages:
     resolution: {integrity: sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==}
     hasBin: true
 
-  katex@0.16.23:
-    resolution: {integrity: sha512-7VlC1hsEEolL9xNO05v9VjrvWZePkCVBJqj8ruICxYjZfHaHbaU53AlP+PODyFIXEnaEIEWi3wJy7FPZ95JAVg==}
+  katex@0.16.22:
+    resolution: {integrity: sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==}
     hasBin: true
 
   keyv@4.5.4:
@@ -11133,11 +11133,11 @@ snapshots:
       unist-util-select: 3.0.4
       unist-util-visit-parents: 3.1.1
 
-  gatsby-remark-katex@7.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))(katex@0.16.23):
+  gatsby-remark-katex@7.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3))(katex@0.16.22):
     dependencies:
       '@babel/runtime': 7.28.3
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.9.3)
-      katex: 0.16.23
+      katex: 0.16.22
       rehype-parse: 7.0.1
       remark-math: 4.0.0
       unified: 9.2.2
@@ -12141,7 +12141,7 @@ snapshots:
     dependencies:
       commander: 2.20.3
 
-  katex@0.16.23:
+  katex@0.16.22:
     dependencies:
       commander: 8.3.0
 
