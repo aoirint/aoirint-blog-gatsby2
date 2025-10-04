@@ -2,14 +2,15 @@
 
 ## Dependencies
 
-- Node 20 (>= 20.7.0)
-- npm 10
+- Node 22
+- pnpm 10
 
 ```shell
-npm ci
+pnpm install --frozen-lockfile
 ```
 
 ## Usage
+
 ### Add articles from another repository
 
 Create `contents` directory on the repository root.
@@ -22,11 +23,11 @@ git clone https://github.com/aoirint/aoirint-blog-contents.git contents
 ### Preview
 
 ```shell
-npm run develop
+pnpm run develop
 ```
 
 ### Deploy
 
 ```shell
-npm run clean && npm run build && npm run deploy
+pnpm run clean && pnpm run build && pnpm run deploy
 ```
