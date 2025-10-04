@@ -1,6 +1,9 @@
 # Enable save-exact
 savePrefix: ''
 
+# Delay the installation of newly published versions (minutes)
+minimumReleaseAge: 1440
+
 # Dependencies allowed to run install scripts
 onlyBuiltDependencies:
   - '@parcel/watcher'
